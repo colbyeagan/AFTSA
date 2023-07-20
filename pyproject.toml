@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "datetime"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AFTSA"
+version = "0.0.1"
+authors = [
+  { name="Deen Freelon", email="dfreelon@gmail.com"},
+]
+description = "A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dfreelon/pyktok"
