@@ -1,4 +1,4 @@
-from AFTSA import funcs
+from . import funcs
 
 #, 2021, 10, 2, 5, 45
 

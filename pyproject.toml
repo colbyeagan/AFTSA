@@ -1,12 +1,12 @@
 [build-system]
-requires = ["setuptools", "datetime"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "AFTSA"
 version = "0.0.1"
 authors = [
-  { name="Deen Freelon", email="dfreelon@gmail.com"},
+  { name="Colby Eagan", email="colbyeagan6@gmail.com"},
 ]
 description = "A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice."
 readme = "README.md"
@@ -17,6 +17,7 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
 ]
+dependencies = ["datetime >= 5.2", "rfc3339-validator == 0.1.4", "rfc3986-validator == 0.1.1", "python-dateutil == 2.8.2", "random", "time"]
 
 [project.urls]
 "Homepage" = "https://github.com/colbyeagan/AFTSA"

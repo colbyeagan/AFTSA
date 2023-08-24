@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/AFTSA/__main__.py
+src/AFTSA/funcs.py
+src/AFTSA/setup.py
+src/AFTSA.egg-info/PKG-INFO
+src/AFTSA.egg-info/SOURCES.txt
+src/AFTSA.egg-info/dependency_links.txt
+src/AFTSA.egg-info/requires.txt
+src/AFTSA.egg-info/top_level.txt
