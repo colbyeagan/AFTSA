@@ -38,7 +38,7 @@ def sort_timestamps(timestamps: list):
     return sorted_timestamps
 
 
-def list_of_one_day_ranges_for_rfc_3339_past_year():
+def one_day_intervals_past_year():
     """Generates 365 one day ranges in rfc3339 format starting at the specified date."""
     start_time_list: list = list()
     end_time_list: list = list()

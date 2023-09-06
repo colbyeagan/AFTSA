@@ -24,17 +24,33 @@ from AFTSA import randoms
 ```
 
 This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
+All tuples and 2d arrays of timestamps will be sorted. To receive unsorted queries, dowload source code from github and remove the sort_timestamps() function from all functions.
 
 ## Main functions in intervals  
 
-### intervals.list_of_one_day_ranges_for_rfc_3339_past_year()
+### intervals.one_day_intervals_past_year()
 
-intervals.list_of_one_day_ranges_for_rfc_3339_past_year() is the most straight forward function, taking no arguments. It 
+intervals.one_day_intervals_past_year() is the most straight forward function, taking no arguments. It 
 simply returns two arrays where returnValue[0] is the array of start times and returnValue[1] is the array of end times. This function reads your machine's local clock and returns one day ranges in rfc3339 time format for the prior calendar year from the time you call it.
 ```python
 from AFTSA import randoms
 
-dateLists = intervals.list_of_one_day_ranges_for_rfc_3339_past_year()
+dateLists = intervals.one_day_intervals_past_year()
+
+# Prints (If called on September 6th)
+"""
+2022-09-06T00:00:00Z -- 2022-09-07T00:00:00Z
+2022-09-07T00:00:00Z -- 2022-09-08T00:00:00Z
+2022-09-08T00:00:00Z -- 2022-09-09T00:00:00Z
+2022-09-09T00:00:00Z -- 2022-09-10T00:00:00Z
+2022-09-10T00:00:00Z -- 2022-09-11T00:00:00Z
+2022-09-11T00:00:00Z -- 2022-09-12T00:00:00Z
+...
+2023-09-02T00:00:00Z -- 2023-09-03T00:00:00Z
+2023-09-03T00:00:00Z -- 2023-09-04T00:00:00Z
+2023-09-04T00:00:00Z -- 2023-09-05T00:00:00Z
+2023-09-05T00:00:00Z -- 2023-09-06T00:00:00Z
+"""
 ```
 
 ### intervals.one_day_intervals(...)
@@ -116,13 +132,13 @@ print(randomHourRange)
 # The interval is a 5 hour time range instead of just 1 hour like with randoms.random_date()
 ```
 
-### randoms.n_random_hour_ranges_sorted(n: int)
+### randoms.n_random_hour_ranges(n: int)
 
-randoms.n_random_hour_ranges_sorted(n: int) returns two lists of n random start times and end times (where each start time is one hour before the matching end time) within the past year (month rounding, i.e. if you are in September the time stamps start in October). A non month-rounding version is in the works.
+randoms.n_random_hour_ranges(n: int) returns two lists of n random start times and end times (where each start time is one hour before the matching end time) within the past year (month rounding, i.e. if you are in September the time stamps start in October). A non month-rounding version is in progress.
 
 ```python
 # Will make 100 random 1 hour timestamp ranges in the past year (non overlapping)
-randomDates = randoms.n_random_hour_ranges_sorted(100)
+randomDates = randoms.n_random_hour_ranges(100)
 for i in range(len(randomDates[0])):
     print(f"{randomDates[0][i]} -- {randomDates[1][i]}")
 

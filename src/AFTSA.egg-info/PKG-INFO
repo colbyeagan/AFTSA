@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: AFTSA
-Version: 0.0.2
+Version: 0.0.3
 Summary: A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice.
 Author-email: Colby Eagan <colbyeagan6@gmail.com>
 License: BSD 3-Clause License
@@ -41,8 +41,6 @@ Description-Content-Type: text/markdown
 License-File: LICENSE
 
 # AFTSA - APIs for Time Series Analysis
-
-- Docs in progress
 
 ## Getting Started
 

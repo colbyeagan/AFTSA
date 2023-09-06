@@ -84,7 +84,7 @@ def sort_timestamps(timestamps: list):
     sorted_timestamps = [dt.strftime("%Y-%m-%dT%H:%M:%SZ") for dt in datetimes]
     return sorted_timestamps
 
-def n_random_hour_ranges_sorted(n: int) -> list:
+def n_random_hour_ranges(n: int) -> list:
     """This returns two SORTED lists of n randomly chosen start times and end times (where each index of the end time is one hour after the same index in start time) within the past year."""
     start_time1_list: list = list()
     end_time1_list: list = list()
