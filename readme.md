@@ -14,11 +14,11 @@ pip3.11 install AFTSA
 
 The usage of this package is simple.   
 
-For functions to do randomized time series analysis
+For functions to perform randomized time series analysis
 ```python
 from AFTSA import randoms
 ```
-For functions to do specified intervals time series analysis
+For functions to perform specified intervals time series analysis
 ```python
 from AFTSA import randoms
 ```
@@ -36,6 +36,9 @@ simply returns two arrays where returnValue[0] is the array of start times and r
 from AFTSA import randoms
 
 dateLists = intervals.one_day_intervals_past_year()
+
+for i in range(len(dateLists[0])):
+    print(f"{dateLists[0][i]} -- {dateLists[1][i]}")
 
 # Prints (If called on September 6th)
 """
@@ -58,7 +61,9 @@ dateLists = intervals.one_day_intervals_past_year()
 intervals.one_day_intervals(time_range: int, year: int, month: int, day: int, hour: int = 0, minute: int = 0, second: int = 0)  
 returns time_range amount of days of time stamps after the specified date in the remaining arguments. Only up to the day is a required argument. If no hour or more specific range is specified then the timestamps will default to the beginning of the day at hour zero.  
 ```python
-# returns two arrays both with 100 days of timestamps starting on october 5th 2020 at 15:45 (3:45pm). All of the days start at this time and the end times end at this time the next day
+# returns two arrays both with 100 days of timestamps starting on october 5th 
+# 2020 at 15:45 (3:45pm). All of the days start at this time and the end 
+# times end at this time the next day
 dateLists = intervals.one_day_intervals(100, 2020, 10, 5, 15, 45)
 
 for i in range(len(dateLists[0])):
@@ -86,6 +91,7 @@ intervals.n_day_intervals(num_of_days: int, time_range: int, year: int, month: i
 
 ```python
 dateLists = intervals.n_day_intervals(5, 100, 2020, 10, 5, 15, 45)
+
 for i in range(len(dateLists[0])):
     print(f"{dateLists[0][i]} -- {dateLists[1][i]}")
 
@@ -110,6 +116,7 @@ for i in range(len(dateLists[0])):
 randoms.random_date() returns a tuple with a random one hour time range in the past year
 ```python
 randomHourRange = randoms.random_date()
+
 print(randomHourRange)
 
 # Prints
@@ -123,6 +130,7 @@ print(randomHourRange)
 randoms.random_date_n(n: int) also returns a tuple with a random one hour time range in the past year, however the argument n adjusts the duration of the interval in hour increments. 
 ```python
 randomHourRange = randoms.random_date_n(5)
+
 print(randomHourRange)
 
 # Prints
@@ -139,6 +147,7 @@ randoms.n_random_hour_ranges(n: int) returns two lists of n random start times a
 ```python
 # Will make 100 random 1 hour timestamp ranges in the past year (non overlapping)
 randomDates = randoms.n_random_hour_ranges(100)
+
 for i in range(len(randomDates[0])):
     print(f"{randomDates[0][i]} -- {randomDates[1][i]}")
 
