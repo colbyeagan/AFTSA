@@ -17,10 +17,11 @@ The usage of this package is simple.
 For functions to perform randomized time series analysis
 ```python
 from AFTSA import randoms
-```
+```  
+
 For functions to perform specified intervals time series analysis
 ```python
-from AFTSA import randoms
+from AFTSA import intervals
 ```
 
 This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
