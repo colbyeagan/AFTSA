@@ -1,5 +1,13 @@
 # AFTSA - APIs for Time Series Analysis
 
+[//]: # (badges)
+[![Repo](https://img.shields.io/badge/repo-github-brightgreen)](https://github.com/colbyeagan/AFTSA)
+[![PyPI](https://img.shields.io/pypi/v/AFTSA)](https://pypi.org/project/AFTSA/#history)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/AFTSA)
+[![PyPI - License](https://img.shields.io/pypi/l/AFTSA)](LICENSE.txt)
+![PyPI - Format](https://img.shields.io/pypi/format/AFTSA)
+[![Downloads](https://static.pepy.tech/badge/AFTSA)](https://www.pepy.tech/projects/AFTSA)
+
 ## Getting Started
 
 - Python 3.11 package -- Must run in python 3.11
@@ -19,7 +27,7 @@ For functions to perform randomized time series analysis
 from AFTSA import randoms
 ```  
 
-For functions to perform specified intervals time series analysis
+For functions to perform specified interval time series analysis
 ```python
 from AFTSA import intervals
 ```
