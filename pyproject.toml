@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "AFTSA"
-version = "0.0.3"
+version = "1.0.4"
 authors = [
   { name="Colby Eagan", email="colbyeagan6@gmail.com"},
 ]
