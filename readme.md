@@ -16,18 +16,20 @@ pip3.11 install AFTSA
 
 The usage of this package is simple.   
 
-For N random non-overlapping time stamps within a certain time range
+For functions to do randomized time series analysis
 ```python
 from AFTSA import randoms
 ```
-For specified intervals between time stamps up to N time stamps or for a specified range
+For functions to do specified intervals time series analysis
 ```python
 from AFTSA import randoms
 ```
 
 This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
 
-Main functions in intervals  
+## Main functions in intervals  
+
+### intervals.list_of_one_day_ranges_for_rfc_3339_past_year()
 
 intervals.list_of_one_day_ranges_for_rfc_3339_past_year() is the most straight forward function, taking no arguments. It 
 simply returns two arrays where returnValue[0] is the array of start times and returnValue[1] is the array of end times. This function reads your machine's local clock and returns one day ranges in rfc3339 time format for the prior calendar year from the time you call it.
@@ -36,6 +38,8 @@ from AFTSA import randoms
 
 dateLists = intervals.list_of_one_day_ranges_for_rfc_3339_past_year()
 ```
+
+### intervals.one_day_intervals(...)
 
 intervals.one_day_intervals(time_range: int, year: int, month: int, day: int, hour: int = 0, minute: int = 0, second: int = 0)  
 returns time_range amount of days of time stamps after the specified date in the remaining arguments. Only up to the day is a required argument. If no hour or more specific range is specified then the timestamps will default to the beginning of the day at hour zero.  
@@ -54,8 +58,10 @@ for i in range(len(dateLists[0])):
 2020-10-08T15:45:00Z -- 2020-10-09T15:45:00Z
 2020-10-09T15:45:00Z -- 2020-10-10T15:45:00Z
 2020-10-10T15:45:00Z -- 2020-10-11T15:45:00Z
-2020-10-11T15:45:00Z -- 2020-10-12T15:45:00Z
-2020-10-12T15:45:00Z -- 2020-10-13T15:45:00Z
-2020-10-13T15:45:00Z -- 2020-10-14T15:45:00Z
+...
+2021-01-09T15:45:00Z -- 2021-01-10T15:45:00Z
+2021-01-10T15:45:00Z -- 2021-01-11T15:45:00Z
+2021-01-11T15:45:00Z -- 2021-01-12T15:45:00Z
+2021-01-12T15:45:00Z -- 2021-01-13T15:45:00Z
 """
 ```
