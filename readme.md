@@ -1,7 +1,5 @@
 # AFTSA - APIs for Time Series Analysis
 
-- Docs in progress
-
 ## Getting Started
 
 - Python 3.11 package -- Must run in python 3.11
