@@ -11,13 +11,13 @@ authors = [
 description = "A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice."
 readme = "README.md"
 license = { file="LICENSE" }
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
 ]
-dependencies = ["datetime >= 5.2", "rfc3339-validator == 0.1.4", "rfc3986-validator == 0.1.1", "python-dateutil == 2.8.2", "random", "time"]
+dependencies = ["datetime >= 5.2", "rfc3339-validator == 0.1.4", "rfc3986-validator == 0.1.1", "python-dateutil == 2.8.2"]
 
 [project.urls]
 "Homepage" = "https://github.com/colbyeagan/AFTSA"

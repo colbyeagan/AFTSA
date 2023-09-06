@@ -1,1 +1,4 @@
 datetime>=5.2
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+python-dateutil==2.8.2
