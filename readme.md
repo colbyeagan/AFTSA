@@ -120,10 +120,10 @@ print(randomHourRange)
 
 ### randoms.n_random_hour_ranges_sorted(n: int)
 
-randoms.n_random_hour_ranges_sorted(n: int) returns two lists of n random start times and end times (where each start time is one hour before the matching end time) within the past year (month rounding, ie if you are in September the time stamps start in October). A non month-rounding version is in the works.
+randoms.n_random_hour_ranges_sorted(n: int) returns two lists of n random start times and end times (where each start time is one hour before the matching end time) within the past year (month rounding, i.e. if you are in September the time stamps start in October). A non month-rounding version is in the works.
 
 ```python
-# Will make 100 random one hour timestamp ranges in the past year (non overlapping)
+# Will make 100 random 1 hour timestamp ranges in the past year (non overlapping)
 randomDates = randoms.n_random_hour_ranges_sorted(100)
 for i in range(len(randomDates[0])):
     print(f"{randomDates[0][i]} -- {randomDates[1][i]}")
@@ -140,5 +140,28 @@ for i in range(len(randomDates[0])):
 2023-09-03T18:00:00Z -- 2023-09-03T19:00:00Z
 2023-09-03T21:00:00Z -- 2023-09-03T22:00:00Z
 2023-09-05T21:00:00Z -- 2023-09-05T22:00:00Z
+"""
+```
+
+### randoms.n_random_m_ranges(n: int, m: int)
+
+randoms.n_random_m_ranges(n: int, m: int) returns two lists of n random start times and end times (where each start time is m hours before the matching end time) within the past year (month rounding, i.e. if you are in September the time stamps start in October). A non month-rounding version is in the works.
+
+
+```python
+# Will make 100 random 5 hour timestamp ranges in the past year (non overlapping)
+randomRanges = randoms.n_random_m_ranges(100, 5)
+
+for i in range(len(randomRanges[0])):
+    print(f"{randomRanges[0][i]} -- {randomRanges[1][i]}")
+
+# Prints
+"""
+2022-10-07T07:00:00Z -- 2022-10-07T12:00:00Z
+2022-10-13T04:00:00Z -- 2022-10-13T09:00:00Z
+2022-10-17T02:00:00Z -- 2022-10-17T07:00:00Z
+2022-10-18T08:00:00Z -- 2022-10-18T13:00:00Z
+2022-10-20T16:00:00Z -- 2022-10-20T21:00:00Z
+2022-10-25T05:00:00Z -- 2022-10-25T10:00:00Z
 """
 ```
