@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: AFTSA
-Version: 1.0.8
+Version: 1.0.9
 Summary: A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice.
 Author-email: Colby Eagan <colbyeagan6@gmail.com>
 License: BSD 3-Clause License
@@ -39,6 +39,10 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.11
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: datetime>=5.2
+Requires-Dist: rfc3339-validator==0.1.4
+Requires-Dist: rfc3986-validator==0.1.1
+Requires-Dist: python-dateutil==2.8.2
 
 # AFTSA - APIs for Time Series Analysis
 
@@ -55,6 +59,11 @@ License-File: LICENSE
 
 - Python 3.11 package -- Must run in python 3.11
 
+This Python package is meant for generating timestamps to be called in API or database queries where the data contains a start-time and/or end-time field. Using the functions in thie package, one can stream random or interval spaced timestamp queries into API and Database calls to generate datasets which chart over a specified time period or with randomized analysis in that specified period. This is a very cruical tool if you wish to perform time series analysis with a subset of a database.  
+
+This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
+All tuples and 2d arrays of timestamps will be sorted. To receive unsorted queries, dowload source code from github and remove the sort_timestamps() function from all functions.  
+
 ```
 pip install AFTSA  
 ```
@@ -68,15 +77,14 @@ The usage of this package is simple.
 For functions to perform randomized time series analysis
 ```python
 from AFTSA import randoms
-```  
+```   
+
 
 For functions to perform specified interval time series analysis
 ```python
 from AFTSA import intervals
-```
-
-This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
-All tuples and 2d arrays of timestamps will be sorted. To receive unsorted queries, dowload source code from github and remove the sort_timestamps() function from all functions.
+```  
+ 
 
 ## Main functions in intervals  
 
