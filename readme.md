@@ -13,6 +13,11 @@
 
 - Python 3.11 package -- Must run in python 3.11
 
+This Python package is meant for generating timestamps to be called in API or database queries where the data contains a start-time and/or end-time field. Using the functions in thie package, one can stream random or interval spaced timestamp queries into API and Database calls to generate datasets which chart over a specified time period or with randomized analysis in that specified period. This is a very cruical tool if you wish to perform time series analysis with a subset of a database.  
+
+This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
+All tuples and 2d arrays of timestamps will be sorted. To receive unsorted queries, dowload source code from github and remove the sort_timestamps() function from all functions.  
+
 ```
 pip install AFTSA  
 ```
@@ -26,15 +31,14 @@ The usage of this package is simple.
 For functions to perform randomized time series analysis
 ```python
 from AFTSA import randoms
-```  
+```   
+
 
 For functions to perform specified interval time series analysis
 ```python
 from AFTSA import intervals
-```
-
-This package currently supports rfc3339 timestamp generation in the %Y-%m-%dT%H:%M:%SZ format. More timestamp formats can easily be added by cloning from github and changing the "return dt.strftime("%Y-%m-%dT%H:%M:%SZ")" statements across the functions you need. 
-All tuples and 2d arrays of timestamps will be sorted. To receive unsorted queries, dowload source code from github and remove the sort_timestamps() function from all functions.
+```  
+ 
 
 ## Main functions in intervals  
 

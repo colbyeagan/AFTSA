@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: AFTSA
-Version: 1.0.7
+Version: 1.0.8
 Summary: A package for creating evenly distributed and randomized, non overlapping rfc3339 timestamps for conducting statistical time series analysis using your API of choice.
 Author-email: Colby Eagan <colbyeagan6@gmail.com>
 License: BSD 3-Clause License
@@ -43,12 +43,13 @@ License-File: LICENSE
 # AFTSA - APIs for Time Series Analysis
 
 [//]: # (badges)
+[![Downloads](https://static.pepy.tech/badge/AFTSA)](https://www.pepy.tech/projects/AFTSA)
 [![Repo](https://img.shields.io/badge/repo-github-brightgreen)](https://github.com/colbyeagan/AFTSA)
 [![PyPI](https://img.shields.io/pypi/v/AFTSA)](https://pypi.org/project/AFTSA/#history)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/AFTSA)
 [![PyPI - License](https://img.shields.io/pypi/l/AFTSA)](LICENSE.txt)
 ![PyPI - Format](https://img.shields.io/pypi/format/AFTSA)
-[![Downloads](https://static.pepy.tech/badge/AFTSA)](https://www.pepy.tech/projects/AFTSA)
+
 
 ## Getting Started
 
